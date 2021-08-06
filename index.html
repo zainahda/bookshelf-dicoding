@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-wrap">
+      <header>
+        <!-- header start -->
+        <h1 class="title">Bookshelf App</h1>
+        <button class="add-book">+ Tambah Buku</button>
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="search_books"
+            placeholder="Masukan Judul Buku..."
+          />
+        </div>
+        <!-- header end -->
+      </header>
+      <main>
+        <!-- library start -->
+        <div class="library">
+          <div id="searchResult" class="book_list"></div>
+          <section class="book_shelf">
+            <h2>Belum dibaca</h2>
+
+            <div id="incompleteBookshelfList" class="book_list">
+              <!-- <article class="book_item">
+                <h3>Book Title</h3>
+                <p>Penulis: John Doe</p>
+                <p>Tahun: 2002</p>
+
+                <div class="action">
+                  <button class="checked">
+                    <img
+                      src="./assets/image/checked.png"
+                      alt="selesai-dibaca"
+                    />
+                  </button>
+                  <button class="delete">
+                    <img src="./assets/image/delete.png" alt="hapus-buku" />
+                  </button>
+                </div>
+              </article> -->
+            </div>
+          </section>
+
+          <section class="book_shelf">
+            <h2>Selesai dibaca</h2>
+
+            <div id="completeBookshelfList" class="book_list">
+              <!-- <article class="book_item">
+                <h3>Book Title</h3>
+                <p>Penulis: John Doe</p>
+                <p>Tahun: 2002</p>
+
+                <div class="action">
+                  <button class="undo">
+                  </button>
+                  <button class="delete">
+                    <img src="./assets/image/delete.png" alt="hapus-buku" />
+                  </button>
+                </div>
+              </article> -->
+            </div>
+          </section>
+        </div>
+        <!-- library end -->
+      </main>
+
+      <!-- form start -->
+      <div class="modal">
+        <section class="input_section">
+          <h2>Masukkan Buku Baru</h2>
+          <form id="inputBook">
+            <div class="input">
+              <label for="inputBookTitle">Judul</label>
+              <input id="inputBookTitle" type="text" required />
+            </div>
+            <div class="input">
+              <label for="inputBookAuthor">Penulis</label>
+              <input id="inputBookAuthor" type="text" required />
+            </div>
+            <div class="input">
+              <label for="inputBookYear">Tahun</label>
+              <input id="inputBookYear" type="number" required />
+            </div>
+            <div class="input_inline">
+              <label for="inputBookIsComplete">Selesai dibaca</label>
+              <input id="inputBookIsComplete" type="checkbox" />
+            </div>
+            <button id="bookSubmit" type="submit">
+              Masukkan Buku ke rak <strong>Belum selesai</strong> dibaca
+            </button>
+          </form>
+          <span class="modal-close"><i class="fas fa-times-circle"></i></span>
+        </section>
+      </div>
+      <!-- form end -->
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+
+  </body>
+</html>
+
+
